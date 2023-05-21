@@ -14,6 +14,8 @@ export const checkIfPalindrome = (text: string): number => {
     }
   });
 
+  // If word length is even, array length should be 0
+  // If word length is odd, array length should be 1
   const lengthToCompare = wordLength % 2 === 0 ? 1 : 2;
 
   result = letterArray.length < lengthToCompare ? 1 : 0;

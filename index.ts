@@ -10,9 +10,10 @@ app.use(cors());
 
 app.get("/:text", (req, res) => {
   const text = req.params.text;
+
   const result = checkIfPalindrome(text);
   const response = result === 1 ? true : false;
-  res.send({
+  res.status(200).json({
     data: {
       anagram: text,
       canFormPalindrome: response,
