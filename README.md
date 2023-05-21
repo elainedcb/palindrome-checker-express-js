@@ -1,0 +1,1 @@
+Simple ExpressJS app to check if word can form a palindrome
