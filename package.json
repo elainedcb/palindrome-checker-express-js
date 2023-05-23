@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --no-cache --detectOpenHandles",
+    "test-app": "yarn test-dev -t app",
+    "test-dev": "PORT=8082 jest --coverage --no-cache --detectOpenHandles",
+    "test-stage": "PORT=8083 jest --coverage --no-cache --detectOpenHandles",
     "build": "npx tsc",
-    "start": "ts-node index.ts",
+    "start": "PORT=8082 ts-node index.ts",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
   },
   "author": "",
@@ -24,6 +26,7 @@
     "@types/node": "^20.2.1",
     "@types/supertest": "^2.0.12",
     "concurrently": "^8.0.1",
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.22",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.0",

@@ -1,6 +1,6 @@
-import { checkIfPalindrome } from "./checkIfPalindrome";
+import { checkIfPalindrome } from "../../components/checkIfPalindrome";
 
-describe("Check If Palindrome test", () => {
+describe("Component - Check If Palindrome test", () => {
   const cases = [
     { text: "dooernedeevrvn", expected: 1 },
     { text: "aabcba", expected: 0 },
@@ -10,7 +10,7 @@ describe("Check If Palindrome test", () => {
   ];
 
   test.each(cases)(
-    "should test if $text will return if palindrome",
+    "component - should test if $text will return if palindrome",
     ({ text, expected }) => {
       const answer = checkIfPalindrome(text);
       expect(answer).toEqual(expected);

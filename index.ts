@@ -4,7 +4,7 @@ import express from "express";
 import { checkIfPalindrome } from "./components/checkIfPalindrome";
 
 const app = express();
-const port = 8081;
+const port = process.env.PORT || 8081;
 
 app.use(cors());
 
